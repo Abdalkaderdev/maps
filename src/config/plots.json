@@ -1,0 +1,27 @@
+{
+  "companyName": "Plot Viewer",
+  "locations": [
+    {
+      "id": "sample-location-1",
+      "name": "Sample Location 1",
+      "description": "Example overlay area",
+      "image": "/plots/sample.svg",
+      "bounds": {
+        "southWest": [24.7100, 46.6700],
+        "northEast": [24.7200, 46.6850]
+      },
+      "opacity": 0.7
+    },
+    {
+      "id": "sample-location-2",
+      "name": "Sample Location 2",
+      "description": "Another example area",
+      "image": "/plots/sample.svg",
+      "bounds": {
+        "southWest": [21.4850, 39.1800],
+        "northEast": [21.4950, 39.1950]
+      },
+      "opacity": 0.7
+    }
+  ]
+}

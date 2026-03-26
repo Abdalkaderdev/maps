@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300">
+  <rect width="400" height="300" fill="rgba(255,150,50,0.3)" stroke="rgba(255,100,50,0.8)" stroke-width="3"/>
+  <text x="200" y="140" text-anchor="middle" fill="rgba(255,255,255,0.8)" font-family="sans-serif" font-size="20">Sample Plot Overlay</text>
+  <text x="200" y="170" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-family="sans-serif" font-size="14">Replace with your PNG</text>
+  <line x1="0" y1="0" x2="400" y2="300" stroke="rgba(255,100,50,0.3)" stroke-width="1"/>
+  <line x1="400" y1="0" x2="0" y2="300" stroke="rgba(255,100,50,0.3)" stroke-width="1"/>
+</svg>
