@@ -95,13 +95,8 @@ export default function Map({ locations, activeLocationId, opacity }: MapProps) 
       allBounds.push(bounds);
     });
 
-    // Fit map to show all locations
-    if (allBounds.length > 0) {
-      const group = L.featureGroup(
-        allBounds.map((b) => L.rectangle(b, { stroke: false, fill: false }))
-      );
-      map.fitBounds(group.getBounds(), { padding: [50, 50] });
-    }
+    // Open on Erbil by default
+    map.setView([36.19, 44.01], 13);
 
     mapRef.current = map;
 
