@@ -162,3 +162,29 @@ body {
 .leaflet-control-zoom a:hover {
   background: rgba(40, 40, 60, 0.95) !important;
 }
+
+/* Layer switcher */
+.leaflet-control-layers {
+  background: rgba(20, 20, 30, 0.92) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3) !important;
+  color: #fff !important;
+  backdrop-filter: blur(8px);
+}
+
+.leaflet-control-layers-toggle {
+  background-color: rgba(20, 20, 30, 0.9) !important;
+  border-radius: 6px !important;
+  width: 36px !important;
+  height: 36px !important;
+}
+
+.leaflet-control-layers label {
+  color: #ddd !important;
+  font-size: 13px;
+}
+
+.leaflet-control-layers-separator {
+  border-top-color: rgba(255, 255, 255, 0.1) !important;
+}

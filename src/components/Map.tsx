@@ -24,14 +24,44 @@ export default function Map({ locations, activeLocationId, opacity }: MapProps) 
       zoomControl: false,
     });
 
-    // ESRI World Imagery satellite tiles
-    L.tileLayer(
+    // Map layer options
+    const satellite = L.tileLayer(
       "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
-      {
-        attribution: "Tiles &copy; Esri",
-        maxZoom: 19,
-      }
-    ).addTo(map);
+      { attribution: "Tiles &copy; Esri", maxZoom: 19 }
+    );
+
+    const streets = L.tileLayer(
+      "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+      { attribution: "&copy; OpenStreetMap contributors", maxZoom: 19 }
+    );
+
+    const terrain = L.tileLayer(
+      "https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}",
+      { attribution: "Tiles &copy; Esri", maxZoom: 19 }
+    );
+
+    const hybrid = L.layerGroup([
+      L.tileLayer(
+        "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+        { maxZoom: 19 }
+      ),
+      L.tileLayer(
+        "https://stamen-tiles.a.ssl.fastly.net/toner-labels/{z}/{x}/{y}.png",
+        { maxZoom: 19, attribution: "Labels &copy; Stamen" }
+      ),
+    ]);
+
+    // Default to satellite
+    satellite.addTo(map);
+
+    // Layer switcher control
+    const baseMaps: Record<string, L.Layer> = {
+      "Satellite": satellite,
+      "Streets": streets,
+      "Terrain": terrain,
+      "Hybrid": hybrid,
+    };
+    L.control.layers(baseMaps, {}, { position: "topright" }).addTo(map);
 
     // Zoom control in top-right
     L.control.zoom({ position: "topright" }).addTo(map);

@@ -2,24 +2,24 @@
   "companyName": "Plot Viewer",
   "locations": [
     {
-      "id": "sample-location-1",
-      "name": "Sample Location 1",
-      "description": "Example overlay area",
+      "id": "erbil-project-1",
+      "name": "Erbil - Zone A",
+      "description": "Sample project area",
       "image": "/plots/sample.svg",
       "bounds": {
-        "southWest": [24.7100, 46.6700],
-        "northEast": [24.7200, 46.6850]
+        "southWest": [36.1800, 44.0000],
+        "northEast": [36.1900, 44.0150]
       },
       "opacity": 0.7
     },
     {
-      "id": "sample-location-2",
-      "name": "Sample Location 2",
-      "description": "Another example area",
+      "id": "erbil-project-2",
+      "name": "Erbil - Zone B",
+      "description": "Sample project area",
       "image": "/plots/sample.svg",
       "bounds": {
-        "southWest": [21.4850, 39.1800],
-        "northEast": [21.4950, 39.1950]
+        "southWest": [36.2100, 44.0300],
+        "northEast": [36.2200, 44.0450]
       },
       "opacity": 0.7
     }
