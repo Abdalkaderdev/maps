@@ -2,24 +2,13 @@
   "companyName": "Plot Viewer",
   "locations": [
     {
-      "id": "erbil-project-1",
-      "name": "Erbil - Zone A",
-      "description": "Sample project area",
-      "image": "/plots/sample.svg",
+      "id": "erbil-plot-1",
+      "name": "Erbil - Main Plot",
+      "description": "Subdivision map",
+      "image": "/plots/erbil-plot.jpg",
       "bounds": {
-        "southWest": [36.1800, 44.0000],
-        "northEast": [36.1900, 44.0150]
-      },
-      "opacity": 0.7
-    },
-    {
-      "id": "erbil-project-2",
-      "name": "Erbil - Zone B",
-      "description": "Sample project area",
-      "image": "/plots/sample.svg",
-      "bounds": {
-        "southWest": [36.2100, 44.0300],
-        "northEast": [36.2200, 44.0450]
+        "southWest": [36.2530, 44.0100],
+        "northEast": [36.2690, 44.0230]
       },
       "opacity": 0.7
     }

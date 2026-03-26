@@ -48,13 +48,20 @@ export default function Map({ locations, activeLocationId, opacity }: MapProps) 
         { maxZoom: 19 }
       ),
       L.tileLayer(
-        "https://stamen-tiles.a.ssl.fastly.net/toner-labels/{z}/{x}/{y}.png",
-        { maxZoom: 19, attribution: "Labels &copy; Stamen" }
+        "https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}",
+        { maxZoom: 19, attribution: "Labels &copy; Esri" }
       ),
     ]);
 
-    // Default to satellite
+    // Labels overlay — country borders, city names, roads
+    const labelsOverlay = L.tileLayer(
+      "https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}",
+      { maxZoom: 19, attribution: "Labels &copy; Esri" }
+    );
+
+    // Default to satellite with labels
     satellite.addTo(map);
+    labelsOverlay.addTo(map);
 
     // Layer switcher control
     const baseMaps: Record<string, L.Layer> = {
@@ -63,7 +70,10 @@ export default function Map({ locations, activeLocationId, opacity }: MapProps) 
       "Terrain": terrain,
       "Hybrid": hybrid,
     };
-    L.control.layers(baseMaps, {}, { position: "topright" }).addTo(map);
+    const overlayMaps: Record<string, L.Layer> = {
+      "Labels & Borders": labelsOverlay,
+    };
+    L.control.layers(baseMaps, overlayMaps, { position: "topright" }).addTo(map);
 
     // Zoom control in top-right
     L.control.zoom({ position: "topright" }).addTo(map);
@@ -95,8 +105,8 @@ export default function Map({ locations, activeLocationId, opacity }: MapProps) 
       allBounds.push(bounds);
     });
 
-    // Open on Erbil by default
-    map.setView([36.19, 44.01], 13);
+    // Open on Erbil centered on plot area
+    map.setView([36.2610, 44.0166], 14);
 
     mapRef.current = map;
 
