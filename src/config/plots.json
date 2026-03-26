@@ -5,12 +5,12 @@
       "id": "erbil-plot-1",
       "name": "Erbil - Main Plot",
       "description": "Subdivision map",
-      "image": "/plots/erbil-plot.jpg",
+      "image": "/plots/erbil-plot.png",
       "bounds": {
-        "southWest": [36.2530, 44.0100],
-        "northEast": [36.2690, 44.0230]
+        "southWest": [36.2500, 44.0130],
+        "northEast": [36.2660, 44.0260]
       },
-      "opacity": 0.7
+      "opacity": 0.85
     }
   ]
 }
