@@ -3,6 +3,8 @@
 import { useEffect, useRef } from "react";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
+import { GeoSearchControl, OpenStreetMapProvider } from "leaflet-geosearch";
+import "leaflet-geosearch/dist/geosearch.css";
 import type { PlotLocation } from "@/types/plots";
 
 interface MapProps {
@@ -65,6 +67,18 @@ export default function Map({ locations, activeLocationId, opacity }: MapProps) 
 
     // Zoom control in top-right
     L.control.zoom({ position: "topright" }).addTo(map);
+
+    // City search control
+    const searchControl = GeoSearchControl({
+      provider: new OpenStreetMapProvider(),
+      style: "bar",
+      showMarker: true,
+      showPopup: false,
+      autoClose: true,
+      searchLabel: "Search for a city...",
+      keepResult: true,
+    });
+    map.addControl(searchControl);
 
     // Add image overlays for each location
     const allBounds: L.LatLngBoundsExpression[] = [];

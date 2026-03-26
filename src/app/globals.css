@@ -188,3 +188,65 @@ body {
 .leaflet-control-layers-separator {
   border-top-color: rgba(255, 255, 255, 0.1) !important;
 }
+
+/* Search bar */
+.leaflet-control-geosearch {
+  position: absolute !important;
+  top: 10px !important;
+  left: 300px !important;
+  width: 350px !important;
+  z-index: 1000 !important;
+}
+
+.leaflet-control-geosearch form {
+  background: rgba(20, 20, 30, 0.92) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  border-radius: 8px !important;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3) !important;
+  padding: 0 !important;
+}
+
+.leaflet-control-geosearch form input {
+  background: transparent !important;
+  color: #fff !important;
+  border: none !important;
+  outline: none !important;
+  font-size: 14px !important;
+  padding: 10px 14px !important;
+  width: 100% !important;
+  min-height: unset !important;
+  height: auto !important;
+}
+
+.leaflet-control-geosearch form input::placeholder {
+  color: rgba(255, 255, 255, 0.4) !important;
+}
+
+.leaflet-control-geosearch .results {
+  background: rgba(20, 20, 30, 0.95) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  border-top: none !important;
+  border-radius: 0 0 8px 8px !important;
+  color: #fff !important;
+}
+
+.leaflet-control-geosearch .results > * {
+  padding: 8px 14px !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.06) !important;
+  color: #ddd !important;
+  font-size: 13px !important;
+}
+
+.leaflet-control-geosearch .results > *:hover {
+  background: rgba(255, 255, 255, 0.08) !important;
+}
+
+.leaflet-control-geosearch a.reset {
+  color: rgba(255, 255, 255, 0.5) !important;
+  background: none !important;
+}
+
+.leaflet-control-geosearch button.reset span {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
