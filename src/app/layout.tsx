@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Plot Map Viewer",
+  title: "Real House Company — Plot Map Viewer",
   description: "Land plot overlay viewer on satellite maps",
 };
 
