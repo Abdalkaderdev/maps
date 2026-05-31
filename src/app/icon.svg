@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 120" fill="none">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F0B142"/>
+      <stop offset="100%" style="stop-color:#E9A033"/>
+    </linearGradient>
+  </defs>
+  <!-- Outer flame/droplet curve -->
+  <path d="M50 8 C28 28, 18 52, 18 72 C18 94, 32 108, 50 112 C68 108, 82 94, 82 72 C82 52, 72 28, 50 8Z"
+        stroke="url(#goldGrad)" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <!-- Left building tower -->
+  <path d="M36 92 L36 58 L50 42"
+        stroke="url(#goldGrad)" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Right building tower (taller) -->
+  <path d="M50 92 L50 28 L64 44 L64 92"
+        stroke="url(#goldGrad)" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

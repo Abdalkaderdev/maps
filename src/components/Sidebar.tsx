@@ -22,8 +22,11 @@ export default function Sidebar({
   return (
     <div className="sidebar">
       <div className="sidebar-header">
-        <h1 className="sidebar-title">{companyName}</h1>
-        <p className="sidebar-subtitle">Plot Map Viewer</p>
+        <img src="/logo.svg" alt="" className="sidebar-logo" />
+        <div>
+          <h1 className="sidebar-title">{companyName}</h1>
+          <p className="sidebar-subtitle">Plot Map Viewer</p>
+        </div>
       </div>
 
       <div className="sidebar-locations">
